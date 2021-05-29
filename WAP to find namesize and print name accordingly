@@ -1,0 +1,16 @@
+name = input("Enter your name: ")
+size = len(name)
+if size >=20:
+    for y in range (1, 101):
+        print(str(y) +" " +name)
+elif size >= 10:
+    for y in range(1, 51):
+        print(str(y)+" " + name)
+elif size >= 5:
+    for y in range(1, 21):
+        print(str(y)+" "+name)
+elif size>= 3:
+    for y in range(1, 11):
+        print(str(y) + " " + name)
+else: 
+    print("invalid input")
