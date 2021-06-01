@@ -1,0 +1,32 @@
+class Student : 
+    def __init__(self,name,age,Avg_gpa,sex, mom, dad):
+        self.name = name
+        self.age = age
+        self.Avg_gpa = float(Avg_gpa)
+        self.sex = sex
+        self.mom = mom
+        self.dad = dad
+    def funcStudent_Info(self):
+        print(self.name +" "+ self.age+ " sex: "+self.sex)
+    
+    def func_SexMale(self):
+        if self.sex == "M" :
+            return True
+    def stud_par(self):
+        print("parents: "+self.mom +", "+ self.dad)
+    
+    def stud_grade(self):
+        if self.Avg_gpa > 3.6:
+            print("A+")
+        elif self.Avg_gpa > 3.2:
+            print("A")
+        elif self.Avg_gpa > 2.8:
+            print("B")
+        else:
+            print("below B, call your parents")
+
+s1 = Student("Jeevan", "18", 2.7, "M", "MK", "DK")
+s1.funcStudent_Info()
+s1.func_SexMale()
+s1.stud_par()
+s1.stud_grade()
