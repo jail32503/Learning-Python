@@ -1,0 +1,16 @@
+class Staff():
+    def __init__(self, name, id_num, department, salary, LabAcc):
+        self.name = name
+        self.id_num = id_num
+        self.department = department
+        self.salary = salary
+        self.LabAcc = LabAcc
+    
+class Professor(Staff):
+    def __init__(self, name, id_num, department, salary, LabAcc, tenure):
+        super().__init__(name, id_num, department, salary, LabAcc)
+        self.tenure = True
+        
+        
+p2 = Professor("labh", "42", "covid", 45000, "yes", True)
+print(p2.salary)
