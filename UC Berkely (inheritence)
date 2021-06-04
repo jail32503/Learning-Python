@@ -7,10 +7,50 @@ class Staff():
         self.LabAcc = LabAcc
     
 class Professor(Staff):
-    def __init__(self, name, id_num, department, salary, LabAcc, tenure):
+    def __init__(self, name, id_num, department, salary, LabAcc, tenure, current_research):
         super().__init__(name, id_num, department, salary, LabAcc)
-        self.tenure = True
-        
-        
-p2 = Professor("labh", "42", "covid", 45000, "yes", True)
-print(p2.salary)
+        self.tenure = tenure
+        self.current_research = current_research
+    def id(self):
+        print("Name: ", self.name)
+        print("ID number: ", self.id_num)
+        print("Department: ", self.department)
+        print("Salary: ", self.salary)
+        print("Lab Access: ", self.LabAcc)
+        print("Tenure: ", self.tenure)
+        print("Current Research: ", self.current_research)
+class Researcher(Staff):
+    def __init__(self, name, id_num, department, salary, LabAcc, current_research):
+        super().__init__(name, id_num, department, salary, LabAcc)
+        self.current_research = current_research
+    def id(self):
+        print("Name: ", self.name)
+        print("ID number: ", self.id_num)
+        print("Department: ", self.department)
+        print("Salary: ", self.salary)
+        print("Lab Access: ", self.LabAcc)
+        print("Current Research: ", self.current_research)    
+class PHDStud(Staff):
+    def __init__(self, name, id_num, department, salary, LabAcc, grades):
+        super().__init__(name, id_num, department, salary, LabAcc)
+        self.grades = grades
+    def id(self):
+        print("Name: ", self.name)
+        print("ID number: ", self.id_num)
+        print("Department: ", self.department)
+        print("Salary: ", self.salary)
+        print("Lab Access: ", self.LabAcc)
+        print("Grades: ", self.grades)
+p2 = Professor("labh", "42", "covid", 45000, "Granted", True, "Vaxxx")
+r2 = Researcher("Rhishab", "6969", "genome testing", 60000, "Granted", "AI with genome")
+s2 = PHDStud("Girwanee", "420", "academia", 30000, "Denied", "A")
+print("1 for prof, 2 for researcher, 3 for PHD")
+choice = input("Enter your choice: ")
+if choice == "1":
+    p2.id()
+elif choice == "2":
+    r2.id()
+elif choice == "3":
+    s2.id()
+else:
+    print("invalid input")
